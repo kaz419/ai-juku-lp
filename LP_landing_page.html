@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>中小企業向けAI活用オンライン塾 | 提案書作成を2時間→30分に</title>
-    <meta name="description" content="ChatGPT・Geminiで業務効率10倍。週1回2時間のオンライン講義で、提案書・議事録・見積もりを自動化。1名3万円〜、複数名なら5万円で何名でもOK！">
+    <title>AI活用実践塾 | 提案書作成を2時間→30分に</title>
+    <meta name="description" content="部門責任者・経営者のための実践的AI活用プログラム。週1回2時間のオンライン講義で、提案書・議事録・見積もりを自動化。明日から使えるスキルを習得。">
     <style>
         * {
             margin: 0;
@@ -13,386 +13,505 @@
         }
         
         body {
-            font-family: 'Hiragino Sans', 'Yu Gothic', sans-serif;
-            line-height: 1.8;
-            color: #333;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', YuGothic, Meiryo, sans-serif;
+            line-height: 1.6;
+            color: #1d1d1f;
+            background: #fff;
+            -webkit-font-smoothing: antialiased;
         }
         
         .container {
-            max-width: 1200px;
+            max-width: 980px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 22px;
         }
         
         /* ヘッダー */
         header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 80px 20px;
+            background: #1d1d1f;
+            color: #f5f5f7;
+            padding: 120px 22px 100px;
             text-align: center;
         }
         
         header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            font-weight: bold;
+            font-size: 56px;
+            font-weight: 600;
+            line-height: 1.07;
+            letter-spacing: -0.005em;
+            margin-bottom: 12px;
         }
         
-        header p {
-            font-size: 1.3rem;
-            margin-bottom: 30px;
-            opacity: 0.95;
+        header .subtitle {
+            font-size: 28px;
+            font-weight: 400;
+            line-height: 1.14;
+            color: #a1a1a6;
+            margin-bottom: 32px;
+        }
+        
+        header .lead {
+            font-size: 21px;
+            line-height: 1.38;
+            font-weight: 400;
+            color: #f5f5f7;
+            margin-bottom: 48px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-group {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
         }
         
         .cta-button {
             display: inline-block;
-            background: #FF6B6B;
+            background: #0071e3;
             color: white;
-            padding: 18px 50px;
-            font-size: 1.2rem;
-            font-weight: bold;
+            padding: 12px 22px;
+            font-size: 17px;
+            font-weight: 400;
             text-decoration: none;
-            border-radius: 50px;
-            box-shadow: 0 8px 20px rgba(255,107,107,0.3);
-            transition: all 0.3s ease;
-            margin: 10px;
+            border-radius: 980px;
+            transition: all 0.2s ease;
+            min-width: 200px;
+            text-align: center;
         }
         
         .cta-button:hover {
-            background: #ee5a52;
-            transform: translateY(-3px);
-            box-shadow: 0 12px 25px rgba(255,107,107,0.4);
+            background: #0077ed;
         }
         
         .cta-button.secondary {
-            background: white;
-            color: #667eea;
+            background: transparent;
+            border: 1px solid #0071e3;
+            color: #0071e3;
         }
         
         .cta-button.secondary:hover {
-            background: #f0f0f0;
+            background: #0071e3;
+            color: white;
         }
         
         /* セクション共通 */
         section {
-            padding: 80px 20px;
+            padding: 100px 22px;
         }
         
         section h2 {
-            font-size: 2.2rem;
+            font-size: 48px;
+            font-weight: 600;
+            line-height: 1.08;
+            letter-spacing: -0.003em;
             text-align: center;
-            margin-bottom: 50px;
-            color: #667eea;
+            margin-bottom: 16px;
+            color: #1d1d1f;
         }
         
-        /* 悩みセクション */
-        .problems {
-            background: #f9f9f9;
+        section .section-subtitle {
+            font-size: 24px;
+            line-height: 1.33;
+            font-weight: 400;
+            color: #86868b;
+            text-align: center;
+            margin-bottom: 60px;
         }
         
-        .problems ul {
-            list-style: none;
-            max-width: 800px;
+        /* Hero Numbers */
+        .hero-numbers {
+            background: #fbfbfd;
+            padding: 80px 22px;
+        }
+        
+        .numbers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            max-width: 980px;
             margin: 0 auto;
         }
         
-        .problems li {
-            font-size: 1.2rem;
-            padding: 15px;
-            margin-bottom: 15px;
-            background: white;
-            border-left: 5px solid #FF6B6B;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        .number-card {
+            text-align: center;
         }
         
-        .problems li::before {
-            content: "☑ ";
-            color: #FF6B6B;
-            font-weight: bold;
+        .number-card .big-number {
+            font-size: 64px;
+            font-weight: 600;
+            color: #0071e3;
+            line-height: 1;
+            margin-bottom: 8px;
         }
         
-        /* 価値提案セクション */
+        .number-card .number-label {
+            font-size: 17px;
+            color: #1d1d1f;
+            font-weight: 400;
+        }
+        
+        /* 課題セクション */
+        .problems {
+            background: #fff;
+        }
+        
+        .problems-list {
+            max-width: 800px;
+            margin: 0 auto;
+            list-style: none;
+        }
+        
+        .problems-list li {
+            font-size: 21px;
+            line-height: 1.38;
+            padding: 20px 0;
+            border-bottom: 1px solid #d2d2d7;
+            color: #1d1d1f;
+        }
+        
+        .problems-list li:last-child {
+            border-bottom: none;
+        }
+        
+        /* 価値提案 */
         .value {
-            background: white;
+            background: #fbfbfd;
         }
         
         .value-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
+            gap: 48px;
+            margin-top: 60px;
         }
         
         .value-card {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-            text-align: center;
+            text-align: left;
+        }
+        
+        .value-card .icon {
+            font-size: 48px;
+            margin-bottom: 16px;
         }
         
         .value-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            color: #667eea;
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #1d1d1f;
         }
         
-        .value-card .time {
-            font-size: 1rem;
-            color: #999;
-            margin-top: 10px;
+        .value-card p {
+            font-size: 17px;
+            line-height: 1.47;
+            color: #86868b;
+            margin-bottom: 16px;
         }
         
-        .value-card .time strong {
-            color: #FF6B6B;
-            font-size: 1.1rem;
+        .value-card .time-comparison {
+            font-size: 14px;
+            color: #0071e3;
+            font-weight: 500;
         }
         
-        /* カリキュラム */
-        .curriculum {
-            background: #f9f9f9;
+        /* Before/After比較 */
+        .comparison-large {
+            background: #1d1d1f;
+            color: #f5f5f7;
+            padding: 100px 22px;
         }
         
-        .curriculum-list {
-            max-width: 900px;
-            margin: 0 auto;
+        .comparison-large h2 {
+            color: #f5f5f7;
         }
         
-        .curriculum-item {
-            background: white;
-            padding: 25px;
-            margin-bottom: 20px;
-            border-radius: 10px;
-            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+        .comparison-large .section-subtitle {
+            color: #a1a1a6;
         }
         
-        .curriculum-item h3 {
-            font-size: 1.5rem;
-            color: #667eea;
-            margin-bottom: 15px;
+        .comparison-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            max-width: 980px;
+            margin: 60px auto 0;
         }
         
-        .curriculum-item ul {
+        .comparison-side {
+            text-align: center;
+        }
+        
+        .comparison-side h3 {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 24px;
+            color: #a1a1a6;
+        }
+        
+        .comparison-side.after h3 {
+            color: #0071e3;
+        }
+        
+        .comparison-side .big-time {
+            font-size: 96px;
+            font-weight: 700;
+            line-height: 1;
+            margin-bottom: 16px;
+        }
+        
+        .comparison-side .time-label {
+            font-size: 21px;
+            color: #a1a1a6;
+            margin-bottom: 32px;
+        }
+        
+        .comparison-side ul {
             list-style: none;
-            padding-left: 20px;
+            text-align: left;
         }
         
-        .curriculum-item li {
+        .comparison-side li {
+            font-size: 17px;
+            line-height: 1.47;
+            padding: 12px 0;
+            color: #f5f5f7;
+        }
+        
+        /* 対象者 */
+        .target {
+            background: #fff;
+        }
+        
+        .target-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 32px;
+            max-width: 980px;
+            margin: 60px auto 0;
+        }
+        
+        .target-card {
+            text-align: center;
+            padding: 32px 20px;
+            background: #fbfbfd;
+            border-radius: 18px;
+        }
+        
+        .target-card h3 {
+            font-size: 21px;
+            font-weight: 600;
+            color: #1d1d1f;
             margin-bottom: 8px;
         }
         
-        .curriculum-item li::before {
-            content: "→ ";
-            color: #FF6B6B;
-            font-weight: bold;
-        }
-        
-        /* 比較表 */
-        .comparison {
-            background: white;
-        }
-        
-        .comparison-table {
-            width: 100%;
-            max-width: 1000px;
-            margin: 0 auto;
-            border-collapse: collapse;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-        }
-        
-        .comparison-table th, .comparison-table td {
-            padding: 20px;
-            text-align: center;
-            border: 1px solid #ddd;
-        }
-        
-        .comparison-table th {
-            background: #667eea;
-            color: white;
-            font-size: 1.1rem;
-        }
-        
-        .comparison-table tr:nth-child(even) {
-            background: #f9f9f9;
-        }
-        
-        .comparison-table .highlight {
-            background: #fff3cd;
-            font-weight: bold;
-        }
-        
-        /* 受講生の声 */
-        .testimonials {
-            background: #f9f9f9;
-        }
-        
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-        
-        .testimonial-card {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-        }
-        
-        .testimonial-card blockquote {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: #555;
-            margin-bottom: 20px;
-            font-style: italic;
-        }
-        
-        .testimonial-card .author {
-            font-weight: bold;
-            color: #667eea;
-            text-align: right;
+        .target-card p {
+            font-size: 14px;
+            color: #86868b;
         }
         
         /* 料金プラン */
         .pricing {
-            background: white;
+            background: #fbfbfd;
         }
         
         .pricing-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 32px;
+            max-width: 980px;
+            margin: 60px auto 0;
         }
         
         .pricing-card {
-            background: white;
-            padding: 40px 30px;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            background: #fff;
+            border-radius: 18px;
+            padding: 48px 40px;
             text-align: center;
-            border: 3px solid transparent;
+            border: 2px solid #d2d2d7;
             transition: all 0.3s ease;
         }
         
         .pricing-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+            border-color: #0071e3;
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
         }
         
         .pricing-card.featured {
-            border-color: #FF6B6B;
+            border-color: #0071e3;
+            border-width: 3px;
         }
         
         .pricing-card .plan-name {
-            font-size: 1.5rem;
-            font-weight: bold;
-            margin-bottom: 15px;
-            color: #333;
+            font-size: 17px;
+            font-weight: 600;
+            color: #86868b;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        .pricing-card.featured .plan-name {
+            color: #0071e3;
         }
         
         .pricing-card .price {
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: #FF6B6B;
-            margin-bottom: 10px;
+            font-size: 56px;
+            font-weight: 700;
+            color: #1d1d1f;
+            margin-bottom: 8px;
+            line-height: 1;
         }
         
         .pricing-card .price-note {
-            font-size: 0.9rem;
-            color: #999;
-            margin-bottom: 20px;
+            font-size: 17px;
+            color: #86868b;
+            margin-bottom: 32px;
         }
         
         .pricing-card ul {
             list-style: none;
             text-align: left;
-            margin-bottom: 30px;
+            margin-bottom: 32px;
         }
         
         .pricing-card li {
-            padding: 10px 0;
-            border-bottom: 1px solid #eee;
+            padding: 12px 0;
+            font-size: 17px;
+            color: #1d1d1f;
+            border-bottom: 1px solid #f5f5f7;
         }
         
-        .pricing-card li::before {
-            content: "✓ ";
-            color: #4CAF50;
-            font-weight: bold;
+        .pricing-card li:last-child {
+            border-bottom: none;
+        }
+        
+        .pricing-card .cta-button {
+            width: 100%;
+        }
+        
+        /* 受講生の声 */
+        .testimonials {
+            background: #fff;
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 48px;
+            margin-top: 60px;
+        }
+        
+        .testimonial-card {
+            background: #fbfbfd;
+            padding: 40px;
+            border-radius: 18px;
+        }
+        
+        .testimonial-card blockquote {
+            font-size: 19px;
+            line-height: 1.42;
+            color: #1d1d1f;
+            margin-bottom: 24px;
+            font-style: normal;
+        }
+        
+        .testimonial-card .author {
+            font-size: 14px;
+            color: #86868b;
+            font-weight: 500;
+        }
+        
+        .testimonial-card .company {
+            font-size: 12px;
+            color: #a1a1a6;
+            margin-top: 4px;
         }
         
         /* FAQ */
         .faq {
-            background: #f9f9f9;
+            background: #fbfbfd;
         }
         
         .faq-list {
-            max-width: 900px;
+            max-width: 800px;
             margin: 0 auto;
         }
         
         .faq-item {
-            background: white;
-            padding: 25px;
-            margin-bottom: 20px;
-            border-radius: 10px;
-            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+            background: #fff;
+            padding: 32px 40px;
+            margin-bottom: 16px;
+            border-radius: 18px;
         }
         
         .faq-item h3 {
-            font-size: 1.3rem;
-            color: #667eea;
-            margin-bottom: 15px;
+            font-size: 21px;
+            font-weight: 600;
+            color: #1d1d1f;
+            margin-bottom: 12px;
         }
         
         .faq-item p {
-            color: #555;
-            line-height: 1.8;
+            font-size: 17px;
+            line-height: 1.47;
+            color: #86868b;
         }
         
-        /* デモセミナー案内 */
-        .demo {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        /* CTA Section */
+        .cta-section {
+            background: #0071e3;
             color: white;
+            padding: 100px 22px;
             text-align: center;
         }
         
-        .demo h2 {
+        .cta-section h2 {
+            font-size: 48px;
+            font-weight: 600;
             color: white;
+            margin-bottom: 16px;
         }
         
-        .demo-info {
-            background: rgba(255,255,255,0.1);
-            padding: 30px;
-            border-radius: 15px;
-            max-width: 800px;
-            margin: 30px auto;
+        .cta-section p {
+            font-size: 21px;
+            line-height: 1.38;
+            margin-bottom: 40px;
+            color: rgba(255,255,255,0.9);
         }
         
-        .demo-info p {
-            font-size: 1.2rem;
-            margin-bottom: 15px;
-        }
-        
-        /* 最後のCTA */
-        .final-cta {
+        .cta-section .cta-button {
             background: white;
+            color: #0071e3;
+        }
+        
+        .cta-section .cta-button:hover {
+            background: #f5f5f7;
+        }
+        
+        /* Footer */
+        footer {
+            background: #f5f5f7;
+            padding: 60px 22px 40px;
             text-align: center;
         }
         
-        /* フッター */
-        footer {
-            background: #333;
-            color: white;
-            padding: 40px 20px;
-            text-align: center;
+        footer p {
+            font-size: 14px;
+            color: #86868b;
+            line-height: 1.43;
+            margin-bottom: 12px;
         }
         
         footer a {
-            color: white;
+            color: #424245;
             text-decoration: none;
-            margin: 0 15px;
+            margin: 0 12px;
+            font-size: 12px;
         }
         
         footer a:hover {
@@ -402,252 +521,274 @@
         /* レスポンシブ */
         @media (max-width: 768px) {
             header h1 {
-                font-size: 1.8rem;
+                font-size: 40px;
             }
             
-            header p {
-                font-size: 1rem;
+            header .subtitle {
+                font-size: 21px;
+            }
+            
+            header .lead {
+                font-size: 17px;
             }
             
             section h2 {
-                font-size: 1.8rem;
+                font-size: 32px;
             }
             
-            .comparison-table {
-                font-size: 0.85rem;
+            section .section-subtitle {
+                font-size: 19px;
             }
             
-            .comparison-table th, .comparison-table td {
-                padding: 10px;
+            .number-card .big-number {
+                font-size: 48px;
+            }
+            
+            .comparison-container {
+                grid-template-columns: 1fr;
+                gap: 48px;
+            }
+            
+            .comparison-side .big-time {
+                font-size: 64px;
+            }
+            
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-group {
+                flex-direction: column;
+            }
+            
+            .cta-button {
+                width: 100%;
             }
         }
     </style>
 </head>
 <body>
-    <!-- ヘッダー / ファーストビュー -->
+    <!-- ヘッダー -->
     <header>
-        <div class="container">
-            <h1>提案書作成が2時間 → 30分に。<br>中小企業のための「明日から使える」AI活用実践塾</h1>
-            <p>ChatGPT・Geminiを使って、提案書・議事録・見積もりを自動化。<br>週1回2時間のオンライン講義で、業務効率が10倍になる。</p>
-            <a href="#demo" class="cta-button">無料デモセミナーに参加する</a>
-            <a href="#download" class="cta-button secondary">まずは資料をダウンロード</a>
+        <h1>AI活用で、<br>業務効率を10倍に。</h1>
+        <p class="subtitle">部門責任者・経営者のための実践プログラム</p>
+        <p class="lead">提案書作成、議事録、見積もり。<br>明日から使えるAI活用スキルを、週1回2時間で習得。</p>
+        <div class="cta-group">
+            <a href="#demo" class="cta-button">無料デモセミナーに参加</a>
+            <a href="#pricing" class="cta-button secondary">料金を見る</a>
         </div>
     </header>
 
-    <!-- 悩みセクション -->
+    <!-- 実績数字 -->
+    <section class="hero-numbers">
+        <div class="container">
+            <div class="numbers-grid">
+                <div class="number-card">
+                    <div class="big-number">75%</div>
+                    <div class="number-label">平均時短率</div>
+                </div>
+                <div class="number-card">
+                    <div class="big-number">30分</div>
+                    <div class="number-label">提案書作成時間</div>
+                </div>
+                <div class="number-card">
+                    <div class="big-number">翌日</div>
+                    <div class="number-label">実務で使える</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 課題 -->
     <section class="problems">
         <div class="container">
-            <h2>中小企業の経営者・責任者の方、こんなお悩みありませんか？</h2>
-            <ul>
-                <li>提案書や見積書を作るのに何時間もかかる</li>
-                <li>会議の議事録作成が負担</li>
-                <li>AIを使いたいけど、何から始めればいいか分からない</li>
-                <li>書籍やYouTubeを見ても、実務に活かせない</li>
-                <li>社員にAIスキルを身につけさせたいが、教える人がいない</li>
-                <li>コンサルを雇う数百万円の予算はない</li>
+            <h2>こんな課題、ありませんか？</h2>
+            <p class="section-subtitle">部門責任者が直面する、現場の非効率</p>
+            <ul class="problems-list">
+                <li>提案書や見積書の作成に、営業担当が何時間も費やしている</li>
+                <li>会議の議事録作成が負担で、本質的な業務に時間が割けない</li>
+                <li>AIを活用したいが、何から始めればいいか分からない</li>
+                <li>部下にAIスキルを身につけさせたいが、教える人材がいない</li>
+                <li>外部コンサルを雇う予算はないが、現場の効率化は急務</li>
             </ul>
-            <p style="text-align: center; margin-top: 30px; font-size: 1.3rem; font-weight: bold; color: #667eea;">
-                AI活用塾なら、これらの悩みをすべて解決できます。
-            </p>
         </div>
     </section>
 
-    <!-- 価値提案セクション -->
+    <!-- Before/After大きく -->
+    <section class="comparison-large">
+        <div class="container">
+            <h2>提案書作成が、<br>2時間から30分に。</h2>
+            <p class="section-subtitle">商談録音をAIに投入するだけで、提案書ドラフトが完成</p>
+            <div class="comparison-container">
+                <div class="comparison-side before">
+                    <h3>Before</h3>
+                    <div class="big-time">2時間</div>
+                    <p class="time-label">従来の提案書作成</p>
+                    <ul>
+                        <li>記憶を頼りに作成</li>
+                        <li>顧客の要望を漏らすリスク</li>
+                        <li>営業担当の残業が増加</li>
+                        <li>複数案件で対応が追いつかない</li>
+                    </ul>
+                </div>
+                <div class="comparison-side after">
+                    <h3>After</h3>
+                    <div class="big-time">30分</div>
+                    <p class="time-label">AI活用後</p>
+                    <ul>
+                        <li>録音をもとに正確に反映</li>
+                        <li>顧客の発言を漏らさない</li>
+                        <li>営業効率が劇的に向上</li>
+                        <li>受注率も10%向上</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 価値提案 -->
     <section class="value">
         <div class="container">
-            <h2>週1回2時間の講義で、こんなことができるようになります</h2>
+            <h2>明日から使える、<br>実践的なAIスキル。</h2>
+            <p class="section-subtitle">週1回2時間の講義で、業務が劇的に変わる</p>
             <div class="value-grid">
                 <div class="value-card">
-                    <h3>📝 提案書を5分で作成</h3>
+                    <div class="icon">📝</div>
+                    <h3>提案書を5分で作成</h3>
                     <p>商談録音をAIに投入するだけで、提案書ドラフトが完成。あとは微調整のみ。</p>
-                    <p class="time"><strong>Before: 2時間</strong> → <strong>After: 30分</strong></p>
+                    <p class="time-comparison">Before: 2時間 → After: 30分</p>
                 </div>
                 <div class="value-card">
-                    <h3>📋 議事録を自動生成</h3>
+                    <div class="icon">📋</div>
+                    <h3>議事録を自動生成</h3>
                     <p>会議を録音するだけ。AIが自動で文字起こし → 議事録に整形。</p>
-                    <p class="time"><strong>Before: 1時間</strong> → <strong>After: 5分</strong></p>
+                    <p class="time-comparison">Before: 1時間 → After: 5分</p>
                 </div>
                 <div class="value-card">
-                    <h3>💰 見積もりを10分で</h3>
+                    <div class="icon">💰</div>
+                    <h3>見積もりを10分で</h3>
                     <p>過去の見積書をAIに学習させれば、新規見積もりを自動生成。</p>
-                    <p class="time"><strong>Before: 30分</strong> → <strong>After: 10分</strong></p>
+                    <p class="time-comparison">Before: 30分 → After: 10分</p>
                 </div>
-            </div>
-            <div style="text-align: center; margin-top: 50px;">
-                <h3 style="font-size: 1.5rem; margin-bottom: 20px;">他にもこんなことが:</h3>
-                <p style="font-size: 1.1rem; line-height: 2;">
-                    📧 メール返信を30秒で自動生成 | 📊 顧客リストをAIが分析 → 優先順位を提案<br>
-                    🎨 広告画像・SNS投稿をAIで量産 | 🎬 動画編集を10分に短縮 | 📅 日程調整を自動化
-                </p>
+                <div class="value-card">
+                    <div class="icon">📧</div>
+                    <h3>メール返信を30秒で</h3>
+                    <p>問い合わせメールに対する返信文を、AIが自動生成。</p>
+                    <p class="time-comparison">Before: 5分 → After: 30秒</p>
+                </div>
+                <div class="value-card">
+                    <div class="icon">📊</div>
+                    <h3>顧客管理をAIで効率化</h3>
+                    <p>顧客リストをAIが分析。優先順位を自動提案。</p>
+                    <p class="time-comparison">営業効率が2倍に</p>
+                </div>
+                <div class="value-card">
+                    <div class="icon">🎨</div>
+                    <h3>広告・SNS画像を量産</h3>
+                    <p>デザイン外注なしで、AIが広告バナー・SNS投稿画像を自動生成。</p>
+                    <p class="time-comparison">コスト85%削減</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- カリキュラムセクション -->
-    <section class="curriculum">
+    <!-- 対象者 -->
+    <section class="target">
         <div class="container">
-            <h2>毎週こんなことを学びます（一部抜粋）</h2>
-            <div class="curriculum-list">
-                <div class="curriculum-item">
-                    <h3>Month 1: スマホでできるAI活用入門</h3>
-                    <ul>
-                        <li>Week 1: Gmailの返信を30秒で自動生成</li>
-                        <li>Week 2: 会議録音から議事録を5分で作成</li>
-                        <li>Week 3: スケジュール管理の自動化</li>
-                        <li>Week 4: 振り返り + 製造業での活用事例</li>
-                    </ul>
+            <h2>組織規模を問わず、<br>あらゆる部門で活用可能。</h2>
+            <p class="section-subtitle">大企業の一部門、地方営業所、事業部単位でも導入実績あり</p>
+            <div class="target-grid">
+                <div class="target-card">
+                    <h3>経営者</h3>
+                    <p>全社のDX推進</p>
                 </div>
-                <div class="curriculum-item">
-                    <h3>Month 2: 営業・提案業務の効率化</h3>
-                    <ul>
-                        <li>Week 5: ★商談録音から提案書を自動生成★（超人気回）</li>
-                        <li>Week 6: 見積もり作成の時短術</li>
-                        <li>Week 7: 顧客管理をAIで効率化</li>
-                        <li>Week 8: 振り返り + サービス業での成功事例</li>
-                    </ul>
+                <div class="target-card">
+                    <h3>事業部長</h3>
+                    <p>部門の生産性向上</p>
                 </div>
-                <div class="curriculum-item">
-                    <h3>Month 3: 画像・動画・広告の自動化</h3>
-                    <ul>
-                        <li>Week 9: AI画像生成で広告素材作成</li>
-                        <li>Week 10: 動画編集の効率化</li>
-                        <li>Week 11: 広告文の自動生成とA/Bテスト</li>
-                        <li>Week 12: 振り返り + 小売業での成功事例</li>
-                    </ul>
+                <div class="target-card">
+                    <h3>営業所長</h3>
+                    <p>拠点の効率化</p>
                 </div>
-            </div>
-            <p style="text-align: center; margin-top: 30px;">
-                <a href="#" class="cta-button secondary">全カリキュラムを見る（PDF）</a>
-            </p>
-        </div>
-    </section>
-
-    <!-- 比較表セクション -->
-    <section class="comparison">
-        <div class="container">
-            <h2>なぜAI活用塾が選ばれるのか？</h2>
-            <table class="comparison-table">
-                <thead>
-                    <tr>
-                        <th>項目</th>
-                        <th>一般的なAI講座</th>
-                        <th>大手コンサル</th>
-                        <th class="highlight">AI活用塾</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>価格</strong></td>
-                        <td>3〜5万円/月<br>（1名のみ）</td>
-                        <td>50〜300万円<br>（単発）</td>
-                        <td class="highlight"><strong>3〜5万円/月<br>（1社何名でも）</strong></td>
-                    </tr>
-                    <tr>
-                        <td><strong>形式</strong></td>
-                        <td>録画のみ</td>
-                        <td>カスタマイズ</td>
-                        <td class="highlight"><strong>ライブ + 録画</strong></td>
-                    </tr>
-                    <tr>
-                        <td><strong>実践性</strong></td>
-                        <td>座学中心</td>
-                        <td>理論中心</td>
-                        <td class="highlight"><strong>実務で即使える</strong></td>
-                    </tr>
-                    <tr>
-                        <td><strong>サポート</strong></td>
-                        <td>なし</td>
-                        <td>あり（高額）</td>
-                        <td class="highlight"><strong>24時間AI + 週1人間</strong></td>
-                    </tr>
-                    <tr>
-                        <td><strong>最新性</strong></td>
-                        <td>情報が古い</td>
-                        <td>単発で終わり</td>
-                        <td class="highlight"><strong>毎週アップデート</strong></td>
-                    </tr>
-                    <tr>
-                        <td><strong>コミュニティ</strong></td>
-                        <td>なし</td>
-                        <td>なし</td>
-                        <td class="highlight"><strong>受講生同士で交流</strong></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </section>
-
-    <!-- 受講生の声 -->
-    <section class="testimonials">
-        <div class="container">
-            <h2>受講生の声</h2>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <blockquote>
-                        「提案書作成が2時間から30分になり、営業担当の残業が激減しました。受注率も10%向上！」
-                    </blockquote>
-                    <p class="author">— 製造業A社 営業部長 田中様（従業員50名）</p>
+                <div class="target-card">
+                    <h3>部門責任者</h3>
+                    <p>チームのスキル向上</p>
                 </div>
-                <div class="testimonial-card">
-                    <blockquote>
-                        「会議の議事録作成が5分で終わるようになり、週5時間の時短に成功。社員から『もっと早く知りたかった』の声も。」
-                    </blockquote>
-                    <p class="author">— サービス業B社 代表取締役 佐藤様（従業員30名）</p>
-                </div>
-                <div class="testimonial-card">
-                    <blockquote>
-                        「AIで顧客リストを分析したら、3ヶ月放置していた見込み客から成約が取れました！」
-                    </blockquote>
-                    <p class="author">— 不動産C社 営業担当 鈴木様（従業員20名）</p>
+                <div class="target-card">
+                    <h3>プロジェクトリーダー</h3>
+                    <p>業務の自動化</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- 料金プラン -->
-    <section class="pricing">
+    <section class="pricing" id="pricing">
         <div class="container">
-            <h2>料金プラン</h2>
+            <h2>シンプルな料金体系。</h2>
+            <p class="section-subtitle">参加人数に応じて選べる2つのプラン</p>
             <div class="pricing-grid">
                 <div class="pricing-card">
                     <div class="plan-name">1名プラン</div>
-                    <div class="price">月額3万円</div>
-                    <p class="price-note">個人事業主・お試し向け</p>
+                    <div class="price">¥30,000</div>
+                    <p class="price-note">月額 / 個人事業主・お試し向け</p>
                     <ul>
                         <li>週1回ライブ講義（2時間）</li>
                         <li>録画アーカイブ無制限視聴</li>
                         <li>コミュニティ参加</li>
                         <li>AIチャット24時間対応</li>
-                        <li><strong>参加人数: 1名のみ</strong></li>
+                        <li>参加人数: 1名のみ</li>
                     </ul>
-                    <a href="#demo" class="cta-button">今すぐ申し込む</a>
+                    <a href="#demo" class="cta-button secondary">申し込む</a>
                 </div>
                 <div class="pricing-card featured">
                     <div class="plan-name">複数名プラン</div>
-                    <div class="price">月額5万円</div>
-                    <p class="price-note">★おすすめ！先着30社限定★</p>
+                    <div class="price">¥50,000</div>
+                    <p class="price-note">月額 / 何名でもOK（同一法人内）</p>
                     <ul>
                         <li>週1回ライブ講義（2時間）</li>
                         <li>録画アーカイブ無制限視聴</li>
                         <li>コミュニティ参加</li>
                         <li>AIチャット24時間対応</li>
-                        <li><strong>参加人数: 何名でもOK（同一法人内）</strong></li>
+                        <li>参加人数: 無制限（同一法人・部門内）</li>
                     </ul>
-                    <a href="#demo" class="cta-button">今すぐ申し込む</a>
+                    <a href="#demo" class="cta-button">申し込む</a>
                 </div>
             </div>
-            <p style="text-align: center; margin-top: 40px; color: #999;">
-                ※複数名プランは2名以上なら断然お得！<br>
-                ※録画は社内共有OK（社外共有NG）<br>
-                ※初月のみ日割り計算可能
+            <p style="text-align: center; margin-top: 40px; font-size: 14px; color: #86868b;">
+                ※大企業の一部門・営業所単位でもご利用いただけます<br>
+                ※個別相談・カスタマイズ対応は別途お見積もり
             </p>
-            <div style="text-align: center; margin-top: 40px; padding: 30px; background: #f9f9f9; border-radius: 15px; max-width: 800px; margin-left: auto; margin-right: auto;">
-                <h3 style="font-size: 1.5rem; color: #667eea; margin-bottom: 15px;">💼 個別相談・カスタマイズ対応</h3>
-                <p style="font-size: 1.1rem; color: #555; line-height: 1.8;">
-                    社内専用AI構築、業務フロー設計、個別コンサルティングなど、<br>
-                    カスタマイズ対応をご希望の方は別途お見積もりいたします。<br>
-                    <a href="#demo" style="color: #667eea; font-weight: bold; text-decoration: underline;">お気軽にお問い合わせください</a>
-                </p>
+        </div>
+    </section>
+
+    <!-- 受講生の声 -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>導入企業の声。</h2>
+            <p class="section-subtitle">実際に業務効率が劇的に改善した事例</p>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <blockquote>
+                        提案書作成が2時間から30分になり、営業担当の残業が週10時間削減。受注率も10%向上しました。
+                    </blockquote>
+                    <div class="author">営業部長 田中様</div>
+                    <div class="company">製造業A社（従業員50名）</div>
+                </div>
+                <div class="testimonial-card">
+                    <blockquote>
+                        議事録作成が5分で終わるようになり、週5時間の時短に成功。社員から「もっと早く知りたかった」の声も。
+                    </blockquote>
+                    <div class="author">代表取締役 佐藤様</div>
+                    <div class="company">サービス業B社（従業員30名）</div>
+                </div>
+                <div class="testimonial-card">
+                    <blockquote>
+                        大企業の地方営業所として導入。本社に頼らず、現場だけで業務効率化を実現できました。
+                    </blockquote>
+                    <div class="author">営業所長 鈴木様</div>
+                    <div class="company">大手メーカーC社 九州営業所</div>
+                </div>
             </div>
         </div>
     </section>
@@ -655,78 +796,51 @@
     <!-- FAQ -->
     <section class="faq">
         <div class="container">
-            <h2>よくある質問</h2>
+            <h2>よくある質問。</h2>
             <div class="faq-list">
                 <div class="faq-item">
-                    <h3>Q1: AI初心者でも大丈夫ですか？</h3>
+                    <h3>AI初心者でも大丈夫ですか？</h3>
                     <p>はい、大丈夫です。受講生の8割が「ChatGPTを触ったことがない」状態からスタートしています。講師が画面共有で操作を実演するので、一緒に操作すれば必ずできるようになります。</p>
                 </div>
                 <div class="faq-item">
-                    <h3>Q2: 何名まで参加できますか？</h3>
-                    <p><strong>1名プラン：</strong>1名のみ<br>
-                    <strong>複数名プラン：</strong>同一法人内であれば何名でもOKです。社長1名でも、営業部全員でも、料金は同じです。2名以上なら複数名プランが断然お得です！</p>
+                    <h3>大企業の一部門だけでも参加できますか？</h3>
+                    <p>はい、可能です。営業部だけ、地方営業所だけ、プロジェクトチームだけといった部分的な導入実績も多数あります。全社導入の必要はありません。</p>
                 </div>
                 <div class="faq-item">
-                    <h3>Q3: 録画は見られますか？</h3>
+                    <h3>録画は見られますか？</h3>
                     <p>はい、全講義の録画をアーカイブ化しており、無制限で視聴可能です。リアルタイムで参加できなくても安心です。</p>
                 </div>
                 <div class="faq-item">
-                    <h3>Q4: 途中で解約できますか？</h3>
-                    <p>はい、いつでも解約可能です（最低契約期間なし）。ただし、3ヶ月継続すると個別相談1回無料の特典があります。</p>
+                    <h3>途中で解約できますか？</h3>
+                    <p>はい、いつでも解約可能です（最低契約期間なし）。</p>
                 </div>
                 <div class="faq-item">
-                    <h3>Q5: 業種は問いませんか？</h3>
-                    <p>製造業、サービス業、小売業、建設業、不動産業など、業種を問わず活用いただけます。業界別の事例も毎月紹介しています。</p>
-                </div>
-                <div class="faq-item">
-                    <h3>Q6: 有料版のAIツールを契約する必要がありますか？</h3>
+                    <h3>有料版のAIツールを契約する必要がありますか？</h3>
                     <p>初月は無料版のみで十分です。慣れてきたらChatGPT Plus（月20ドル）の契約を推奨しますが、必須ではありません。</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- デモセミナー案内 -->
-    <section class="demo" id="demo">
+    <!-- CTA -->
+    <section class="cta-section" id="demo">
         <div class="container">
-            <h2>まずは無料デモセミナーに参加してみませんか？</h2>
-            <div class="demo-info">
-                <p><strong>日時:</strong> 毎週水曜・金曜 19:00-20:00（Zoom）</p>
-                <p><strong>内容:</strong> 「提案書を5分で作る実演」「質疑応答」</p>
-                <p><strong>参加費:</strong> 無料</p>
-                <p><strong>参加特典:</strong> セミナー参加者限定で初月1万円割引！</p>
-            </div>
+            <h2>まずは無料デモセミナーで、<br>AIの威力を体感。</h2>
+            <p>毎週水曜・金曜 19:00-20:00（Zoom）<br>「提案書を5分で作る実演」+ 質疑応答</p>
             <a href="#" class="cta-button">無料セミナーに申し込む</a>
         </div>
     </section>
 
-    <!-- 最後のCTA -->
-    <section class="final-cta">
-        <div class="container">
-            <h2>AI活用で、あなたの会社の生産性を10倍にしませんか？</h2>
-            <p style="font-size: 1.2rem; margin: 30px 0; color: #555;">
-                AIは難しくありません。<br>
-                正しい使い方を学べば、誰でも業務効率を劇的に改善できます。<br><br>
-                1名なら月額3万円、複数名なら月額5万円で何名でもOK！<br>
-                まずは無料デモセミナーで、AIの威力を体感してください。
-            </p>
-            <a href="#demo" class="cta-button">無料デモセミナーに参加する</a>
-            <a href="#download" class="cta-button secondary">資料をダウンロードする</a>
-        </div>
-    </section>
-
-    <!-- フッター -->
+    <!-- Footer -->
     <footer>
-        <div class="container">
-            <p>運営: AI活用実践塾 | Email: info@ai-juku.jp</p>
-            <p>
-                <a href="#">プライバシーポリシー</a> | 
-                <a href="#">利用規約</a> | 
-                <a href="#">特定商取引法に基づく表記</a> | 
-                <a href="#">お問い合わせ</a>
-            </p>
-            <p style="margin-top: 20px;">&copy; 2026 AI活用実践塾. All rights reserved.</p>
-        </div>
+        <p>AI活用実践塾 | 運営: Vanness</p>
+        <p>
+            <a href="#">プライバシーポリシー</a>
+            <a href="#">利用規約</a>
+            <a href="#">特定商取引法</a>
+            <a href="#">お問い合わせ</a>
+        </p>
+        <p style="margin-top: 20px;">&copy; 2026 AI活用実践塾. All rights reserved.</p>
     </footer>
 </body>
 </html>
