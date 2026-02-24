@@ -180,7 +180,6 @@
             color: white;
         }
         
-        /* セクション共通 */
         section {
             padding: 100px 22px;
             opacity: 0;
@@ -212,638 +211,81 @@
             margin-bottom: 60px;
         }
         
-        /* Hero Numbers */
-        .hero-numbers {
-            background: #fbfbfd;
-            padding: 80px 22px;
-        }
-        
-        .numbers-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            max-width: 980px;
-            margin: 0 auto;
-        }
-        
-        .number-card {
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
-        
-        .number-card:hover {
-            transform: scale(1.05);
-        }
-        
-        .number-card .big-number {
-            font-size: 64px;
-            font-weight: 600;
-            color: #0071e3;
-            line-height: 1;
-            margin-bottom: 8px;
-        }
-        
-        .number-card .number-label {
-            font-size: 17px;
-            color: #1d1d1f;
-            font-weight: 400;
-        }
-        
-        /* AI デモチャット */
-        .ai-demo {
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            padding: 80px 22px;
-        }
-        
-        .demo-container {
-            max-width: 800px;
-            margin: 60px auto 0;
-            background: white;
-            border-radius: 18px;
-            padding: 40px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
-        }
-        
-        .chat-message {
-            padding: 16px 20px;
-            margin-bottom: 12px;
-            border-radius: 12px;
-            opacity: 0;
-            animation: slideIn 0.5s ease forwards;
-        }
-        
-        .chat-message.user {
-            background: #0071e3;
-            color: white;
-            text-align: right;
-            margin-left: 60px;
-        }
-        
-        .chat-message.ai {
-            background: #f5f5f7;
-            color: #1d1d1f;
-            margin-right: 60px;
-        }
-        
-        @keyframes slideIn {
-            from {
-                opacity: 0;
-                transform: translateX(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-        
-        .typing-indicator {
-            display: inline-block;
-            padding: 16px 20px;
-            background: #f5f5f7;
-            border-radius: 12px;
-            margin-right: 60px;
-        }
-        
-        .typing-indicator span {
-            display: inline-block;
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: #86868b;
-            margin: 0 2px;
-            animation: typing 1.4s infinite;
-        }
-        
-        .typing-indicator span:nth-child(2) {
-            animation-delay: 0.2s;
-        }
-        
-        .typing-indicator span:nth-child(3) {
-            animation-delay: 0.4s;
-        }
-        
-        @keyframes typing {
-            0%, 60%, 100% {
-                transform: translateY(0);
-            }
-            30% {
-                transform: translateY(-10px);
-            }
-        }
-        
-        /* 課題セクション */
-        .problems {
-            background: #fff;
-        }
-        
-        .problems-list {
-            max-width: 800px;
-            margin: 0 auto;
-            list-style: none;
-        }
-        
-        .problems-list li {
-            font-size: 21px;
-            line-height: 1.38;
-            padding: 20px 0;
-            border-bottom: 1px solid #d2d2d7;
-            color: #1d1d1f;
-            transition: padding-left 0.3s ease, color 0.3s ease;
-        }
-        
-        .problems-list li:hover {
-            padding-left: 20px;
-            color: #0071e3;
-        }
-        
-        .problems-list li:last-child {
-            border-bottom: none;
-        }
-        
-        /* 価値提案 */
-        .value {
-            background: #fbfbfd;
-        }
-        
-        .value-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 48px;
-            margin-top: 60px;
-        }
-        
-        .value-card {
-            text-align: left;
-            transition: transform 0.3s ease;
-            cursor: pointer;
-        }
-        
-        .value-card:hover {
-            transform: translateY(-8px);
-        }
-        
-        .value-card .icon {
-            font-size: 48px;
-            margin-bottom: 16px;
-            transition: transform 0.3s ease;
-        }
-        
-        .value-card:hover .icon {
-            transform: scale(1.2) rotate(5deg);
-        }
-        
-        .value-card h3 {
-            font-size: 24px;
-            font-weight: 600;
-            margin-bottom: 12px;
-            color: #1d1d1f;
-        }
-        
-        .value-card p {
-            font-size: 17px;
-            line-height: 1.47;
-            color: #86868b;
-            margin-bottom: 16px;
-        }
-        
-        .value-card .time-comparison {
-            font-size: 14px;
-            color: #0071e3;
-            font-weight: 500;
-        }
-        
-        /* Before/After比較 */
-        .comparison-large {
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-            color: #f5f5f7;
-            padding: 100px 22px;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .comparison-large h2 {
-            color: #f5f5f7;
-        }
-        
-        .comparison-large .section-subtitle {
-            color: #a1a1a6;
-        }
-        
-        .comparison-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            max-width: 980px;
-            margin: 60px auto 0;
-        }
-        
-        .comparison-side {
-            text-align: center;
-            padding: 40px;
-            border-radius: 18px;
-            background: rgba(255,255,255,0.05);
-            backdrop-filter: blur(10px);
-            transition: transform 0.3s ease, background 0.3s ease;
-        }
-        
-        .comparison-side:hover {
-            transform: scale(1.05);
-            background: rgba(255,255,255,0.1);
-        }
-        
-        .comparison-side h3 {
-            font-size: 28px;
-            font-weight: 600;
-            margin-bottom: 24px;
-            color: #a1a1a6;
-        }
-        
-        .comparison-side.after h3 {
-            color: #0071e3;
-        }
-        
-        .comparison-side .big-time {
-            font-size: 96px;
-            font-weight: 700;
-            line-height: 1;
-            margin-bottom: 16px;
-        }
-        
-        .comparison-side .time-label {
-            font-size: 21px;
-            color: #a1a1a6;
-            margin-bottom: 32px;
-        }
-        
-        .comparison-side ul {
-            list-style: none;
-            text-align: left;
-        }
-        
-        .comparison-side li {
-            font-size: 17px;
-            line-height: 1.47;
-            padding: 12px 0;
-            color: #f5f5f7;
-        }
-        
-        /* 対象者 */
-        .target {
-            background: #fff;
-        }
-        
-        .target-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 32px;
-            max-width: 980px;
-            margin: 60px auto 0;
-        }
-        
-        .target-card {
-            text-align: center;
-            padding: 32px 20px;
-            background: #fbfbfd;
-            border-radius: 18px;
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-        
-        .target-card:hover {
-            background: #0071e3;
-            color: white;
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,113,227,0.3);
-        }
-        
-        .target-card h3 {
-            font-size: 21px;
-            font-weight: 600;
-            color: #1d1d1f;
-            margin-bottom: 8px;
-            transition: color 0.3s ease;
-        }
-        
-        .target-card:hover h3 {
-            color: white;
-        }
-        
-        .target-card p {
-            font-size: 14px;
-            color: #86868b;
-            transition: color 0.3s ease;
-        }
-        
-        .target-card:hover p {
-            color: rgba(255,255,255,0.9);
-        }
-        
-        /* 料金プラン */
-        .pricing {
-            background: #fbfbfd;
-        }
-        
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 32px;
-            max-width: 980px;
-            margin: 60px auto 0;
-        }
-        
-        .pricing-card {
-            background: #fff;
-            border-radius: 18px;
-            padding: 48px 40px;
-            text-align: center;
-            border: 2px solid #d2d2d7;
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-        
-        .pricing-card:hover {
-            border-color: #0071e3;
-            transform: translateY(-8px);
-            box-shadow: 0 20px 60px rgba(0,113,227,0.15);
-        }
-        
-        .pricing-card.featured {
-            border-color: #0071e3;
-            border-width: 3px;
-            background: linear-gradient(135deg, #fff 0%, #f0f8ff 100%);
-        }
-        
-        .pricing-card .plan-name {
-            font-size: 17px;
-            font-weight: 600;
-            color: #86868b;
-            margin-bottom: 8px;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-        
-        .pricing-card.featured .plan-name {
-            color: #0071e3;
-        }
-        
-        .pricing-card .price {
-            font-size: 56px;
-            font-weight: 700;
-            color: #1d1d1f;
-            margin-bottom: 8px;
-            line-height: 1;
-        }
-        
-        .pricing-card .price-note {
-            font-size: 17px;
-            color: #86868b;
-            margin-bottom: 32px;
-        }
-        
-        .pricing-card ul {
-            list-style: none;
-            text-align: left;
-            margin-bottom: 32px;
-        }
-        
-        .pricing-card li {
-            padding: 12px 0;
-            font-size: 17px;
-            color: #1d1d1f;
-            border-bottom: 1px solid #f5f5f7;
-        }
-        
-        .pricing-card li:last-child {
-            border-bottom: none;
-        }
-        
-        .pricing-card .cta-button {
-            width: 100%;
-        }
-        
-        /* 受講生の声 */
-        .testimonials {
-            background: #fff;
-        }
-        
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 48px;
-            margin-top: 60px;
-        }
-        
-        .testimonial-card {
-            background: #fbfbfd;
-            padding: 40px;
-            border-radius: 18px;
-            transition: all 0.3s ease;
-        }
-        
-        .testimonial-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
-        }
-        
-        .testimonial-card blockquote {
-            font-size: 19px;
-            line-height: 1.42;
-            color: #1d1d1f;
-            margin-bottom: 24px;
-            font-style: normal;
-        }
-        
-        .testimonial-card .author {
-            font-size: 14px;
-            color: #86868b;
-            font-weight: 500;
-        }
-        
-        .testimonial-card .company {
-            font-size: 12px;
-            color: #a1a1a6;
-            margin-top: 4px;
-        }
-        
-        /* FAQ */
-        .faq {
-            background: #fbfbfd;
-        }
-        
-        .faq-list {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .faq-item {
-            background: #fff;
-            padding: 32px 40px;
-            margin-bottom: 16px;
-            border-radius: 18px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        
-        .faq-item:hover {
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-            transform: translateX(5px);
-        }
-        
-        .faq-item h3 {
-            font-size: 21px;
-            font-weight: 600;
-            color: #1d1d1f;
-            margin-bottom: 12px;
-        }
-        
-        .faq-item p {
-            font-size: 17px;
-            line-height: 1.47;
-            color: #86868b;
-        }
-        
-        /* CTA Section */
-        .cta-section {
-            background: linear-gradient(135deg, #0071e3 0%, #0052a3 100%);
-            color: white;
-            padding: 100px 22px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .cta-section::before {
-            content: '';
-            position: absolute;
-            width: 200%;
-            height: 200%;
-            top: -50%;
-            left: -50%;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
-            background-size: 50px 50px;
-            animation: moveGrid 20s linear infinite;
-        }
-        
-        @keyframes moveGrid {
-            0% { transform: translate(0, 0); }
-            100% { transform: translate(50px, 50px); }
-        }
-        
-        .cta-section h2 {
-            font-size: 48px;
-            font-weight: 600;
-            color: white;
-            margin-bottom: 16px;
-            position: relative;
-            z-index: 1;
-        }
-        
-        .cta-section p {
-            font-size: 21px;
-            line-height: 1.38;
-            margin-bottom: 40px;
-            color: rgba(255,255,255,0.9);
-            position: relative;
-            z-index: 1;
-        }
-        
-        .cta-section .cta-button {
-            background: white;
-            color: #0071e3;
-            position: relative;
-            z-index: 1;
-        }
-        
-        .cta-section .cta-button:hover {
-            background: #f5f5f7;
-        }
-        
-        /* Footer */
-        footer {
-            background: #f5f5f7;
-            padding: 60px 22px 40px;
-            text-align: center;
-        }
-        
-        footer p {
-            font-size: 14px;
-            color: #86868b;
-            line-height: 1.43;
-            margin-bottom: 12px;
-        }
-        
-        footer a {
-            color: #424245;
-            text-decoration: none;
-            margin: 0 12px;
-            font-size: 12px;
-            transition: color 0.3s ease;
-        }
-        
-        footer a:hover {
-            color: #0071e3;
-            text-decoration: underline;
-        }
-        
-        /* レスポンシブ */
+        .hero-numbers { background: #fbfbfd; padding: 80px 22px; }
+        .numbers-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; max-width: 980px; margin: 0 auto; }
+        .number-card { text-align: center; transition: transform 0.3s ease; }
+        .number-card:hover { transform: scale(1.05); }
+        .number-card .big-number { font-size: 64px; font-weight: 600; color: #0071e3; line-height: 1; margin-bottom: 8px; }
+        .number-card .number-label { font-size: 17px; color: #1d1d1f; font-weight: 400; }
+
+        .ai-demo { background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); padding: 80px 22px; }
+        .demo-container { max-width: 800px; margin: 60px auto 0; background: white; border-radius: 18px; padding: 40px; box-shadow: 0 20px 60px rgba(0,0,0,0.1); }
+        .chat-message { padding: 16px 20px; margin-bottom: 12px; border-radius: 12px; opacity: 0; animation: slideIn 0.5s ease forwards; }
+        .chat-message.user { background: #0071e3; color: white; text-align: right; margin-left: 60px; }
+        .chat-message.ai { background: #f5f5f7; color: #1d1d1f; margin-right: 60px; }
+        @keyframes slideIn { from { opacity: 0; transform: translateX(-20px); } to { opacity: 1; transform: translateX(0); } }
+
+        .problems { background: #fff; }
+        .problems-list { max-width: 800px; margin: 0 auto; list-style: none; }
+        .problems-list li { font-size: 21px; line-height: 1.38; padding: 20px 0; border-bottom: 1px solid #d2d2d7; color: #1d1d1f; transition: padding-left 0.3s ease, color 0.3s ease; }
+        .problems-list li:hover { padding-left: 20px; color: #0071e3; }
+
+        .value { background: #fbfbfd; }
+        .value-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 48px; margin-top: 60px; }
+        .value-card { text-align: left; transition: transform 0.3s ease; cursor: pointer; }
+        .value-card:hover { transform: translateY(-8px); }
+        .value-card .icon { font-size: 48px; margin-bottom: 16px; }
+        .value-card h3 { font-size: 24px; font-weight: 600; margin-bottom: 12px; color: #1d1d1f; }
+        .value-card p { font-size: 17px; line-height: 1.47; color: #86868b; margin-bottom: 16px; }
+        .value-card .time-comparison { font-size: 14px; color: #0071e3; font-weight: 500; }
+
+        .comparison-large { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); color: #f5f5f7; padding: 100px 22px; }
+        .comparison-large h2 { color: #f5f5f7; }
+        .comparison-large .section-subtitle { color: #a1a1a6; }
+        .comparison-container { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; max-width: 980px; margin: 60px auto 0; }
+        .comparison-side { text-align: center; padding: 40px; border-radius: 18px; background: rgba(255,255,255,0.05); }
+        .comparison-side .big-time { font-size: 96px; font-weight: 700; line-height: 1; margin-bottom: 16px; }
+        .comparison-side ul { list-style: none; text-align: left; }
+
+        .target { background: #fff; }
+        .target-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 32px; max-width: 980px; margin: 60px auto 0; }
+        .target-card { text-align: center; padding: 32px 20px; background: #fbfbfd; border-radius: 18px; }
+
+        .pricing { background: #fbfbfd; }
+        .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 32px; max-width: 980px; margin: 60px auto 0; }
+        .pricing-card { background: #fff; border-radius: 18px; padding: 48px 40px; text-align: center; border: 2px solid #d2d2d7; }
+        .pricing-card.featured { border-color: #0071e3; border-width: 3px; }
+
+        .curriculum { background: #fff; }
+        .curriculum-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-top: 60px; }
+        .curriculum-card { background: #fbfbfd; border: 1px solid #e8e8ed; border-radius: 16px; padding: 24px; }
+        .curriculum-card .week { font-size: 13px; color: #0071e3; font-weight: 600; margin-bottom: 6px; }
+        .curriculum-card h3 { font-size: 20px; margin-bottom: 10px; }
+        .curriculum-card p { font-size: 15px; color: #666; margin-bottom: 10px; }
+        .curriculum-card .outcome { font-size: 14px; color: #1d1d1f; background: #fff; border-radius: 10px; padding: 10px; border: 1px solid #ececf2; }
+
+        .testimonials { background: #fff; }
+        .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 48px; margin-top: 60px; }
+        .testimonial-card { background: #fbfbfd; padding: 40px; border-radius: 18px; }
+
+        .faq { background: #fbfbfd; }
+        .faq-list { max-width: 800px; margin: 0 auto; }
+        .faq-item { background: #fff; padding: 32px 40px; margin-bottom: 16px; border-radius: 18px; }
+
+        .cta-section { background: linear-gradient(135deg, #0071e3 0%, #0052a3 100%); color: white; padding: 100px 22px; text-align: center; }
+
+        footer { background: #f5f5f7; padding: 60px 22px 40px; text-align: center; }
+
         @media (max-width: 768px) {
-            header h1 {
-                font-size: 40px;
-            }
-            
-            header .subtitle {
-                font-size: 21px;
-            }
-            
-            header .lead {
-                font-size: 17px;
-            }
-            
-            section h2 {
-                font-size: 32px;
-            }
-            
-            section .section-subtitle {
-                font-size: 19px;
-            }
-            
-            .number-card .big-number {
-                font-size: 48px;
-            }
-            
-            .comparison-container {
-                grid-template-columns: 1fr;
-                gap: 48px;
-            }
-            
-            .comparison-side .big-time {
-                font-size: 64px;
-            }
-            
-            .pricing-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .cta-group {
-                flex-direction: column;
-            }
-            
-            .cta-button {
-                width: 100%;
-            }
-            
-            .chat-message.user {
-                margin-left: 20px;
-            }
-            
-            .chat-message.ai {
-                margin-right: 20px;
-            }
+            header h1 { font-size: 40px; }
+            section h2 { font-size: 32px; }
+            .comparison-container, .pricing-grid { grid-template-columns: 1fr; }
+            .cta-group { flex-direction: column; }
+            .cta-button { width: 100%; }
         }
     </style>
 </head>
 <body>
-    <!-- ヘッダー -->
     <header>
         <div id="particles-js"></div>
         <h1 id="typing-text"></h1>
@@ -855,403 +297,38 @@
         </div>
     </header>
 
-    <!-- 実績数字 -->
-    <section class="hero-numbers">
-        <div class="container">
-            <div class="numbers-grid">
-                <div class="number-card">
-                    <div class="big-number" data-target="75">0</div>
-                    <div class="number-label">平均時短率（%）</div>
-                </div>
-                <div class="number-card">
-                    <div class="big-number" data-target="30">0</div>
-                    <div class="number-label">提案書作成時間（分）</div>
-                </div>
-                <div class="number-card">
-                    <div class="big-number">翌日</div>
-                    <div class="number-label">実務で使える</div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <section class="hero-numbers"><div class="container"><div class="numbers-grid"><div class="number-card"><div class="big-number">75%</div><div class="number-label">平均時短率</div></div><div class="number-card"><div class="big-number">30分</div><div class="number-label">提案書作成時間</div></div><div class="number-card"><div class="big-number">翌日</div><div class="number-label">実務で使える</div></div></div></div></section>
 
-    <!-- AIデモ -->
-    <section class="ai-demo">
-        <div class="container">
-            <h2>AIが提案書を、<br>30秒で作成。</h2>
-            <p class="section-subtitle">実際の動作をシミュレーション</p>
-            <div class="demo-container" id="demo-chat">
-                <!-- JavaScriptで動的に追加 -->
-            </div>
-        </div>
-    </section>
+    <section class="ai-demo"><div class="container"><h2>AIが提案書を、<br>30秒で作成。</h2><p class="section-subtitle">実際の動作をシミュレーション</p><div class="demo-container" id="demo-chat"></div></div></section>
 
-    <!-- 課題 -->
-    <section class="problems">
-        <div class="container">
-            <h2>こんな課題、ありませんか？</h2>
-            <p class="section-subtitle">部門責任者が直面する、現場の非効率</p>
-            <ul class="problems-list">
-                <li>提案書や見積書の作成に、営業担当が何時間も費やしている</li>
-                <li>会議の議事録作成が負担で、本質的な業務に時間が割けない</li>
-                <li>AIを活用したいが、何から始めればいいか分からない</li>
-                <li>部下にAIスキルを身につけさせたいが、教える人材がいない</li>
-                <li>外部コンサルを雇う予算はないが、現場の効率化は急務</li>
-            </ul>
-        </div>
-    </section>
+    <section class="problems"><div class="container"><h2>こんな課題、ありませんか？</h2><p class="section-subtitle">部門責任者が直面する、現場の非効率</p><ul class="problems-list"><li>提案書や見積書の作成に、営業担当が何時間も費やしている</li><li>会議の議事録作成が負担で、本質的な業務に時間が割けない</li><li>AIを活用したいが、何から始めればいいか分からない</li><li>部下にAIスキルを身につけさせたいが、教える人材がいない</li><li>外部コンサルを雇う予算はないが、現場の効率化は急務</li></ul></div></section>
 
-    <!-- Before/After大きく -->
-    <section class="comparison-large">
-        <div class="container">
-            <h2>提案書作成が、<br>2時間から30分に。</h2>
-            <p class="section-subtitle">商談録音をAIに投入するだけで、提案書ドラフトが完成</p>
-            <div class="comparison-container">
-                <div class="comparison-side before">
-                    <h3>Before</h3>
-                    <div class="big-time">2時間</div>
-                    <p class="time-label">従来の提案書作成</p>
-                    <ul>
-                        <li>記憶を頼りに作成</li>
-                        <li>顧客の要望を漏らすリスク</li>
-                        <li>営業担当の残業が増加</li>
-                        <li>複数案件で対応が追いつかない</li>
-                    </ul>
-                </div>
-                <div class="comparison-side after">
-                    <h3>After</h3>
-                    <div class="big-time">30分</div>
-                    <p class="time-label">AI活用後</p>
-                    <ul>
-                        <li>録音をもとに正確に反映</li>
-                        <li>顧客の発言を漏らさない</li>
-                        <li>営業効率が劇的に向上</li>
-                        <li>受注率も10%向上</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+    <section class="comparison-large"><div class="container"><h2>提案書作成が、<br>2時間から30分に。</h2><p class="section-subtitle">商談録音をAIに投入するだけで、提案書ドラフトが完成</p><div class="comparison-container"><div class="comparison-side before"><h3>Before</h3><div class="big-time">2時間</div><ul><li>記憶を頼りに作成</li><li>顧客要望を漏らすリスク</li><li>営業担当の残業増加</li></ul></div><div class="comparison-side after"><h3>After</h3><div class="big-time">30分</div><ul><li>録音をもとに正確に反映</li><li>顧客の発言を漏らさない</li><li>受注率も10%向上</li></ul></div></div></div></section>
 
-    <!-- 価値提案 -->
-    <section class="value">
-        <div class="container">
-            <h2>明日から使える、<br>実践的なAIスキル。</h2>
-            <p class="section-subtitle">週1回2時間の講義で、業務が劇的に変わる</p>
-            <div class="value-grid">
-                <div class="value-card">
-                    <div class="icon">📝</div>
-                    <h3>提案書を5分で作成</h3>
-                    <p>商談録音をAIに投入するだけで、提案書ドラフトが完成。あとは微調整のみ。</p>
-                    <p class="time-comparison">Before: 2時間 → After: 30分</p>
-                </div>
-                <div class="value-card">
-                    <div class="icon">📋</div>
-                    <h3>議事録を自動生成</h3>
-                    <p>会議を録音するだけ。AIが自動で文字起こし → 議事録に整形。</p>
-                    <p class="time-comparison">Before: 1時間 → After: 5分</p>
-                </div>
-                <div class="value-card">
-                    <div class="icon">💰</div>
-                    <h3>見積もりを10分で</h3>
-                    <p>過去の見積書をAIに学習させれば、新規見積もりを自動生成。</p>
-                    <p class="time-comparison">Before: 30分 → After: 10分</p>
-                </div>
-                <div class="value-card">
-                    <div class="icon">📧</div>
-                    <h3>メール返信を30秒で</h3>
-                    <p>問い合わせメールに対する返信文を、AIが自動生成。</p>
-                    <p class="time-comparison">Before: 5分 → After: 30秒</p>
-                </div>
-                <div class="value-card">
-                    <div class="icon">📊</div>
-                    <h3>顧客管理をAIで効率化</h3>
-                    <p>顧客リストをAIが分析。優先順位を自動提案。</p>
-                    <p class="time-comparison">営業効率が2倍に</p>
-                </div>
-                <div class="value-card">
-                    <div class="icon">🎨</div>
-                    <h3>広告・SNS画像を量産</h3>
-                    <p>デザイン外注なしで、AIが広告バナー・SNS投稿画像を自動生成。</p>
-                    <p class="time-comparison">コスト85%削減</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <section class="value"><div class="container"><h2>明日から使える、<br>実践的なAIスキル。</h2><p class="section-subtitle">週1回2時間の講義で、業務が劇的に変わる</p><div class="value-grid"><div class="value-card"><div class="icon">📝</div><h3>提案書を5分で作成</h3><p>商談録音をAIに投入するだけで、提案書ドラフトが完成。</p><p class="time-comparison">Before: 2時間 → After: 30分</p></div><div class="value-card"><div class="icon">📋</div><h3>議事録を自動生成</h3><p>会議を録音するだけ。AIが自動で文字起こし → 議事録に整形。</p><p class="time-comparison">Before: 1時間 → After: 5分</p></div><div class="value-card"><div class="icon">💰</div><h3>見積もりを10分で</h3><p>過去の見積書をAIに学習させれば、新規見積もりを自動生成。</p><p class="time-comparison">Before: 30分 → After: 10分</p></div></div></div></section>
 
-    <!-- 対象者 -->
-    <section class="target">
-        <div class="container">
-            <h2>組織規模を問わず、<br>あらゆる部門で活用可能。</h2>
-            <p class="section-subtitle">大企業の一部門、地方営業所、事業部単位でも導入実績あり</p>
-            <div class="target-grid">
-                <div class="target-card">
-                    <h3>経営者</h3>
-                    <p>全社のDX推進</p>
-                </div>
-                <div class="target-card">
-                    <h3>事業部長</h3>
-                    <p>部門の生産性向上</p>
-                </div>
-                <div class="target-card">
-                    <h3>営業所長</h3>
-                    <p>拠点の効率化</p>
-                </div>
-                <div class="target-card">
-                    <h3>部門責任者</h3>
-                    <p>チームのスキル向上</p>
-                </div>
-                <div class="target-card">
-                    <h3>プロジェクトリーダー</h3>
-                    <p>業務の自動化</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <section class="target"><div class="container"><h2>組織規模を問わず、<br>あらゆる部門で活用可能。</h2><p class="section-subtitle">大企業の一部門、地方営業所、事業部単位でも導入実績あり</p><div class="target-grid"><div class="target-card"><h3>経営者</h3><p>全社のDX推進</p></div><div class="target-card"><h3>事業部長</h3><p>部門の生産性向上</p></div><div class="target-card"><h3>営業所長</h3><p>拠点の効率化</p></div></div></div></section>
 
-    <!-- 料金プラン -->
-    <section class="pricing" id="pricing">
-        <div class="container">
-            <h2>シンプルな料金体系。</h2>
-            <p class="section-subtitle">参加人数に応じて選べる2つのプラン</p>
-            <div class="pricing-grid">
-                <div class="pricing-card">
-                    <div class="plan-name">1名プラン</div>
-                    <div class="price">¥30,000</div>
-                    <p class="price-note">月額 / 個人事業主・お試し向け</p>
-                    <ul>
-                        <li>週1回ライブ講義（2時間）</li>
-                        <li>録画アーカイブ無制限視聴</li>
-                        <li>コミュニティ参加</li>
-                        <li>AIチャット24時間対応</li>
-                        <li>参加人数: 1名のみ</li>
-                    </ul>
-                    <a href="#demo" class="cta-button secondary">申し込む</a>
-                </div>
-                <div class="pricing-card featured">
-                    <div class="plan-name">複数名プラン</div>
-                    <div class="price">¥50,000</div>
-                    <p class="price-note">月額 / 何名でもOK（同一法人内）</p>
-                    <ul>
-                        <li>週1回ライブ講義（2時間）</li>
-                        <li>録画アーカイブ無制限視聴</li>
-                        <li>コミュニティ参加</li>
-                        <li>AIチャット24時間対応</li>
-                        <li>参加人数: 無制限（同一法人・部門内）</li>
-                    </ul>
-                    <a href="#demo" class="cta-button">申し込む</a>
-                </div>
-            </div>
-            <p style="text-align: center; margin-top: 40px; font-size: 14px; color: #86868b;">
-                ※大企業の一部門・営業所単位でもご利用いただけます<br>
-                ※個別相談・カスタマイズ対応は別途お見積もり
-            </p>
-        </div>
-    </section>
+    <section class="pricing" id="pricing"><div class="container"><h2>シンプルな料金体系。</h2><p class="section-subtitle">参加人数に応じて選べる2つのプラン</p><div class="pricing-grid"><div class="pricing-card"><div class="plan-name">1名プラン</div><div class="price">¥30,000</div></div><div class="pricing-card featured"><div class="plan-name">複数名プラン</div><div class="price">¥50,000</div></div></div></div></section>
 
-    <!-- 受講生の声 -->
-    <section class="testimonials">
-        <div class="container">
-            <h2>導入企業の声。</h2>
-            <p class="section-subtitle">実際に業務効率が劇的に改善した事例</p>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <blockquote>
-                        提案書作成が2時間から30分になり、営業担当の残業が週10時間削減。受注率も10%向上しました。
-                    </blockquote>
-                    <div class="author">営業部長 田中様</div>
-                    <div class="company">製造業A社（従業員50名）</div>
-                </div>
-                <div class="testimonial-card">
-                    <blockquote>
-                        議事録作成が5分で終わるようになり、週5時間の時短に成功。社員から「もっと早く知りたかった」の声も。
-                    </blockquote>
-                    <div class="author">代表取締役 佐藤様</div>
-                    <div class="company">サービス業B社（従業員30名）</div>
-                </div>
-                <div class="testimonial-card">
-                    <blockquote>
-                        大企業の地方営業所として導入。本社に頼らず、現場だけで業務効率化を実現できました。
-                    </blockquote>
-                    <div class="author">営業所長 鈴木様</div>
-                    <div class="company">大手メーカーC社 九州営業所</div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <section class="curriculum"><div class="container"><h2>講義予定（抜粋）。</h2><p class="section-subtitle">1回90分・2テーマ。毎回「明日から使える」を持ち帰る。</p><div class="curriculum-grid"><div class="curriculum-card"><div class="week">Week 1（仕事×仕事）</div><h3>メール自動化 × 議事録作成</h3><p>返信作成や議事録整理をAIで高速化。</p><div class="outcome">メール返信30秒化 / 会議後10分で議事録化</div></div><div class="curriculum-card"><div class="week">Week 2（仕事×プライベート）</div><h3>議事録→提案書 × 旅行プラン最適化</h3><p>業務活用と私生活活用を両方体験。</p><div class="outcome">提案書初稿30分化 / 旅行案10分作成</div></div><div class="curriculum-card"><div class="week">Week 3（仕事×仕事）</div><h3>見積説明文 × フォローメール</h3><p>価格の納得感を言語化。</p><div class="outcome">説明文5分化 / 商談後24時間以内フォロー</div></div><div class="curriculum-card"><div class="week">Week 4（仕事×プライベート）</div><h3>売上×天気分析 × 家計見える化</h3><p>勘ではなく根拠で判断。</p><div class="outcome">分析半日→30分 / 出費パターン可視化</div></div></div><p style="text-align:center; margin-top:26px; color:#666; font-size:14px;">※奇数回：仕事2テーマ / 偶数回：仕事1テーマ + プライベート1テーマ</p></div></section>
 
-    <!-- FAQ -->
-    <section class="faq">
-        <div class="container">
-            <h2>よくある質問。</h2>
-            <div class="faq-list">
-                <div class="faq-item">
-                    <h3>AI初心者でも大丈夫ですか？</h3>
-                    <p>はい、大丈夫です。受講生の8割が「ChatGPTを触ったことがない」状態からスタートしています。講師が画面共有で操作を実演するので、一緒に操作すれば必ずできるようになります。</p>
-                </div>
-                <div class="faq-item">
-                    <h3>大企業の一部門だけでも参加できますか？</h3>
-                    <p>はい、可能です。営業部だけ、地方営業所だけ、プロジェクトチームだけといった部分的な導入実績も多数あります。全社導入の必要はありません。</p>
-                </div>
-                <div class="faq-item">
-                    <h3>録画は見られますか？</h3>
-                    <p>はい、全講義の録画をアーカイブ化しており、無制限で視聴可能です。リアルタイムで参加できなくても安心です。</p>
-                </div>
-                <div class="faq-item">
-                    <h3>途中で解約できますか？</h3>
-                    <p>はい、いつでも解約可能です（最低契約期間なし）。</p>
-                </div>
-                <div class="faq-item">
-                    <h3>有料版のAIツールを契約する必要がありますか？</h3>
-                    <p>初月は無料版のみで十分です。慣れてきたらChatGPT Plus（月20ドル）の契約を推奨しますが、必須ではありません。</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <section class="testimonials"><div class="container"><h2>導入企業の声。</h2><p class="section-subtitle">実際に業務効率が劇的に改善した事例</p><div class="testimonials-grid"><div class="testimonial-card"><blockquote>商談後の提案書づくりが毎回しんどかったですが、今は30分。<br><strong>Before: 2時間 / After: 30分</strong></blockquote><div class="author">営業部長 田中様</div><div class="company">製造業A社（従業員50名）</div></div><div class="testimonial-card"><blockquote>議事録が自動で整って、<strong>Before: 60分 / After: 10分</strong>。チームの動きが速くなりました。</blockquote><div class="author">代表取締役 佐藤様</div><div class="company">サービス業B社（従業員30名）</div></div><div class="testimonial-card"><blockquote>営業所単位で初動が激変。<br><strong>Before: 翌日対応 / After: 当日対応</strong></blockquote><div class="author">営業所長 鈴木様</div><div class="company">大手メーカーC社 九州営業所</div></div></div></div></section>
 
-    <!-- CTA -->
-    <section class="cta-section" id="demo">
-        <div class="container">
-            <h2>まずは無料デモセミナーで、<br>AIの威力を体感。</h2>
-            <p>毎週水曜・金曜 19:00-20:00（Zoom）<br>「提案書を5分で作る実演」+ 質疑応答</p>
-            <a href="#" class="cta-button">無料セミナーに申し込む</a>
-        </div>
-    </section>
+    <section class="faq"><div class="container"><h2>よくある質問。</h2><div class="faq-list"><div class="faq-item"><h3>AI初心者でも大丈夫ですか？</h3><p>はい。受講生の8割が未経験からスタートしています。</p></div></div></div></section>
 
-    <!-- Footer -->
-    <footer>
-        <p>AI活用実践塾 | 運営: Vanness</p>
-        <p>
-            <a href="#">プライバシーポリシー</a>
-            <a href="#">利用規約</a>
-            <a href="#">特定商取引法</a>
-            <a href="#">お問い合わせ</a>
-        </p>
-        <p style="margin-top: 20px;">&copy; 2026 AI活用実践塾. All rights reserved.</p>
-    </footer>
+    <section class="cta-section" id="demo"><div class="container"><h2>まずは無料デモセミナーで、<br>AIの威力を体感。</h2><p>毎週水曜・金曜 19:00-20:00（Zoom）</p><a href="#" class="cta-button">無料セミナーに申し込む</a></div></section>
 
-    <!-- Particles.js -->
+    <footer><p>AI活用実践塾 | 運営: Vanness</p></footer>
+
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    
     <script>
-        // パーティクル背景
-        particlesJS('particles-js', {
-            particles: {
-                number: { value: 80, density: { enable: true, value_area: 800 } },
-                color: { value: '#0071e3' },
-                shape: { type: 'circle' },
-                opacity: { value: 0.3, random: true },
-                size: { value: 3, random: true },
-                line_linked: { enable: true, distance: 150, color: '#0071e3', opacity: 0.2, width: 1 },
-                move: { enable: true, speed: 2, direction: 'none', random: true, straight: false, out_mode: 'out' }
-            },
-            interactivity: {
-                detect_on: 'canvas',
-                events: { onhover: { enable: true, mode: 'grab' }, onclick: { enable: true, mode: 'push' } },
-                modes: { grab: { distance: 140, line_linked: { opacity: 0.5 } }, push: { particles_nb: 4 } }
-            }
-        });
-
-        // タイピングアニメーション
+        particlesJS('particles-js', {particles: {number: { value: 60 }, color: { value: '#0071e3' }, shape: { type: 'circle' }, opacity: { value: 0.3 }, size: { value: 3 }, line_linked: { enable: true, distance: 150, color: '#0071e3', opacity: 0.2, width: 1 }, move: { enable: true, speed: 2 }}});
         const text = "AI活用で、業務効率を10倍に。";
         const typingText = document.getElementById('typing-text');
         let i = 0;
-        
-        function typeWriter() {
-            if (i < text.length) {
-                typingText.innerHTML += text.charAt(i);
-                i++;
-                setTimeout(typeWriter, 100);
-            } else {
-                typingText.innerHTML += '<span class="typing-cursor"></span>';
-            }
-        }
-        
+        function typeWriter() { if (i < text.length) { typingText.innerHTML += text.charAt(i); i++; setTimeout(typeWriter, 100); } }
         setTimeout(typeWriter, 500);
-
-        // 数字カウントアップ
-        function animateValue(element, start, end, duration) {
-            let startTimestamp = null;
-            const step = (timestamp) => {
-                if (!startTimestamp) startTimestamp = timestamp;
-                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-                const value = Math.floor(progress * (end - start) + start);
-                element.innerHTML = value;
-                if (progress < 1) {
-                    window.requestAnimationFrame(step);
-                }
-            };
-            window.requestAnimationFrame(step);
-        }
-
-        // スクロールで数字アニメーション
-        const observerOptions = {
-            threshold: 0.5,
-            rootMargin: '0px 0px -100px 0px'
-        };
-
-        const numberObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const target = parseInt(entry.target.dataset.target);
-                    animateValue(entry.target, 0, target, 2000);
-                    numberObserver.unobserve(entry.target);
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('[data-target]').forEach(el => {
-            numberObserver.observe(el);
-        });
-
-        // セクションフェードイン
-        const sectionObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, { threshold: 0.1 });
-
-        document.querySelectorAll('section').forEach(section => {
-            sectionObserver.observe(section);
-        });
-
-        // AIチャットデモ
-        const demoChat = document.getElementById('demo-chat');
-        const chatMessages = [
-            { type: 'user', text: '商談録音から提案書を作成してください', delay: 500 },
-            { type: 'ai', text: '承知しました。録音データを分析中...', delay: 1500 },
-            { type: 'ai', text: '提案書を作成しました！', delay: 2500 },
-            { type: 'ai', text: '📝 顧客の課題：ホームページが古い、採用に苦戦\n💡 提案内容：採用強化型リニューアル\n💰 概算見積：130万円\n📅 納期：3ヶ月', delay: 3500 }
-        ];
-
-        function showChatDemo() {
-            let totalDelay = 0;
-            chatMessages.forEach((msg, index) => {
-                setTimeout(() => {
-                    const messageDiv = document.createElement('div');
-                    messageDiv.className = `chat-message ${msg.type}`;
-                    messageDiv.style.animationDelay = '0s';
-                    messageDiv.textContent = msg.text;
-                    demoChat.appendChild(messageDiv);
-                }, totalDelay);
-                totalDelay += msg.delay;
-            });
-        }
-
-        // デモセクションが表示されたら実行
-        const demoObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    showChatDemo();
-                    demoObserver.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.3 });
-
-        demoObserver.observe(document.querySelector('.ai-demo'));
     </script>
 </body>
 </html>
-<!-- Cache bust 1771598709 -->

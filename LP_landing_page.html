@@ -621,6 +621,60 @@
             width: 100%;
         }
         
+        /* 講義予定 */
+        .curriculum {
+            background: #fff;
+        }
+
+        .curriculum-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-top: 60px;
+        }
+
+        .curriculum-card {
+            background: #fbfbfd;
+            border: 1px solid #e8e8ed;
+            border-radius: 16px;
+            padding: 24px;
+            transition: all 0.25s ease;
+        }
+
+        .curriculum-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+            border-color: #0071e3;
+        }
+
+        .curriculum-card .week {
+            font-size: 13px;
+            color: #0071e3;
+            font-weight: 600;
+            margin-bottom: 6px;
+            letter-spacing: .02em;
+        }
+
+        .curriculum-card h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .curriculum-card p {
+            font-size: 15px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .curriculum-card .outcome {
+            font-size: 14px;
+            color: #1d1d1f;
+            background: #fff;
+            border-radius: 10px;
+            padding: 10px;
+            border: 1px solid #ececf2;
+        }
+
         /* 受講生の声 */
         .testimonials {
             background: #fff;
@@ -855,6 +909,20 @@
         </div>
     </header>
 
+    <!-- なぜこのサービスを作ったのか -->
+    <section class="problems" id="story">
+        <div class="container" style="max-width:860px;">
+            <h2>なぜ、このサービスを作ったのか。</h2>
+            <p class="section-subtitle">AIは普及した。でも「使いこなせる人」はまだ少ない。</p>
+            <div style="background:#fbfbfd; border:1px solid #e8e8ed; border-radius:18px; padding:28px; font-size:18px; line-height:1.7; color:#1d1d1f;">
+                <p style="margin-bottom:14px;">ChatGPTやGeminiを一度は触ったけれど、検索ツール止まり。何から始めればいいかわからない。そんな声を、私たちは何度も聞いてきました。</p>
+                <p style="margin-bottom:14px;">でも実際は、正しい順番で、手取り足取りで使い方を学ぶだけで、誰でも短期間で実務活用できます。メール、議事録、提案書、見積もり。これらはAIで一気に時短できる領域です。</p>
+                <p style="margin-bottom:14px;">1人あたり月に数十時間。チームなら、その何倍もの時間が戻ってきます。経営者・部門責任者にとって、これは単なる効率化ではなく、組織の競争力そのものです。</p>
+                <p><strong>だから私たちは、「知識」ではなく「現場で使える再現手順」を渡す場として、この塾を立ち上げました。</strong></p>
+            </div>
+        </div>
+    </section>
+
     <!-- 実績数字 -->
     <section class="hero-numbers">
         <div class="container">
@@ -1049,6 +1117,67 @@
         </div>
     </section>
 
+    <!-- 講義予定（ワクワクが伝わる具体編） -->
+    <section class="curriculum">
+        <div class="container">
+            <h2>講義予定（抜粋）。</h2>
+            <p class="section-subtitle">1回90分・2テーマ。毎回「明日から使える」を持ち帰る。</p>
+            <div class="curriculum-grid">
+                <div class="curriculum-card">
+                    <div class="week">Week 1（仕事×仕事）</div>
+                    <h3>メール自動化 × 議事録作成</h3>
+                    <p>返信作成や議事録整理をAIで高速化。最初の成功体験を作る回。</p>
+                    <div class="outcome">できるようになること：メール返信30秒化 / 会議後10分で議事録化</div>
+                </div>
+                <div class="curriculum-card">
+                    <div class="week">Week 2（仕事×プライベート）</div>
+                    <h3>議事録→提案書 × 旅行プラン最適化</h3>
+                    <p>業務活用と私生活活用を両方体験。AIの使い方を一気に定着。</p>
+                    <div class="outcome">できるようになること：提案書初稿を30分化 / 条件付き旅行案を10分作成</div>
+                </div>
+                <div class="curriculum-card">
+                    <div class="week">Week 3（仕事×仕事）</div>
+                    <h3>見積説明文 × フォローメール</h3>
+                    <p>「価格の納得感」を言語化し、商談後の初動を速くする。</p>
+                    <div class="outcome">できるようになること：説明文5分化 / 商談後24時間以内フォローの自動化</div>
+                </div>
+                <div class="curriculum-card">
+                    <div class="week">Week 4（仕事×プライベート）</div>
+                    <h3>売上×天気分析 × 家計見える化</h3>
+                    <p>データを掛け合わせて、勘ではなく根拠で判断する力を身につける。</p>
+                    <div class="outcome">できるようになること：分析時間を半日→30分 / 出費パターンの可視化</div>
+                </div>
+                <div class="curriculum-card">
+                    <div class="week">Week 5（仕事×仕事）</div>
+                    <h3>問い合わせ履歴→FAQ化 × クレーム返信テンプレ</h3>
+                    <p>繰り返し対応を資産化し、チーム全体の対応品質をそろえる。</p>
+                    <div class="outcome">できるようになること：対応工数20〜40%削減 / 返信品質の標準化</div>
+                </div>
+                <div class="curriculum-card">
+                    <div class="week">Week 6（仕事×プライベート）</div>
+                    <h3>広告文10案生成 × 献立自動提案</h3>
+                    <p>「案を出す力」を鍛える回。仕事も生活も、迷う時間を減らす。</p>
+                    <div class="outcome">できるようになること：広告案を30秒で量産 / 献立決め20分→5分</div>
+                </div>
+                <div class="curriculum-card">
+                    <div class="week">Week 7（仕事×仕事）</div>
+                    <h3>チャット履歴→ToDo化 × 週報自動化</h3>
+                    <p>会話を実行に変えて、報告業務まで時短する実践回。</p>
+                    <div class="outcome">できるようになること：抜け漏れ防止 / 週報作成30分→10分</div>
+                </div>
+                <div class="curriculum-card">
+                    <div class="week">Week 8（仕事×プライベート）</div>
+                    <h3>顧客分析 × 家計・習慣分析</h3>
+                    <p>データの見方を体得し、意思決定の質を上げる応用回。</p>
+                    <div class="outcome">できるようになること：優先顧客の抽出 / 生活改善ポイント可視化</div>
+                </div>
+            </div>
+            <p style="text-align:center; margin-top:26px; color:#666; font-size:14px;">※奇数回：仕事2テーマ / 偶数回：仕事1テーマ + プライベート1テーマ</p>
+            <p style="text-align:center; margin-top:8px; color:#666; font-size:14px;">※偶数回にプライベート活用を入れる理由：まず「楽しい・使える」を体感してもらい、学習の継続率を高めるためです。</p>
+            <p style="text-align:center; margin-top:8px; color:#666; font-size:14px;">※上記は現時点の仮カリキュラムです。参加者のみなさまの要望に合わせて、毎月アップデートしていきます。</p>
+        </div>
+    </section>
+
     <!-- 受講生の声 -->
     <section class="testimonials">
         <div class="container">
@@ -1057,21 +1186,24 @@
             <div class="testimonials-grid">
                 <div class="testimonial-card">
                     <blockquote>
-                        提案書作成が2時間から30分になり、営業担当の残業が週10時間削減。受注率も10%向上しました。
+                        商談後の提案書づくりが毎回しんどかったですが、今は「会議メモ→提案書初稿」が30分。<br>
+                        <strong>Before: 2時間 / After: 30分</strong> で、残業が減って受注率も上がりました。
                     </blockquote>
                     <div class="author">営業部長 田中様</div>
                     <div class="company">製造業A社（従業員50名）</div>
                 </div>
                 <div class="testimonial-card">
                     <blockquote>
-                        議事録作成が5分で終わるようになり、週5時間の時短に成功。社員から「もっと早く知りたかった」の声も。
+                        会議後の議事録が一番の負担でした。今は要点・決定事項・ToDoまで自動で整って、
+                        <strong>Before: 60分 / After: 10分</strong>。チームの動きが速くなりました。
                     </blockquote>
                     <div class="author">代表取締役 佐藤様</div>
                     <div class="company">サービス業B社（従業員30名）</div>
                 </div>
                 <div class="testimonial-card">
                     <blockquote>
-                        大企業の地方営業所として導入。本社に頼らず、現場だけで業務効率化を実現できました。
+                        営業所単位で試したら、返信や見積説明の初動が激変。<br>
+                        <strong>Before: 翌日対応 / After: 当日対応</strong> が増えて、現場の空気が前向きになりました。
                     </blockquote>
                     <div class="author">営業所長 鈴木様</div>
                     <div class="company">大手メーカーC社 九州営業所</div>
